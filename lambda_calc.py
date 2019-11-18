@@ -40,3 +40,7 @@ exp = lambda n: lambda k: k(n)
 mult = lambda n: lambda k: lambda f: n(k(f))
 pred = lambda n: first( n (phi) (pair(N0)(N0)))
 sub = lambda n: lambda k: k(pred)(n)
+
+isZero = lambda n: n(K(F))(T)
+LeQ = lambda n: lambda k: isZero(sub(n)(k))
+eQ = lambda n: lambda k: And(LeQ(n)(k))(LeQ(n)(k))
