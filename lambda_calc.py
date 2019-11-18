@@ -30,6 +30,7 @@ N3 = lambda f: lambda a: f(f(f(a)))
 N4 = lambda f: lambda a: f(f(f(f(a))))
 N5 = lambda f: lambda a: f(f(f(f(f(a)))))
 
+#lists and list operators
 pair = lambda a: lambda b: lambda f: f(a)(b)
 first = lambda p: p(K)
 second = lambda p: p(KI)

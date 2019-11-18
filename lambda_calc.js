@@ -36,9 +36,10 @@ const Beq = p => q => p(q)((Not(q)))
 const succ = n => f => a => f(n(f)(a))
 const add = n => k => f => B(n(f))(k(f))
 const exp = n => k => k(n)
-const pred = n => first(n(phi)(pair(n0)(n0)))
+const pred = n => first(n(phi)(pair(N0)(N0)))
 const sub = n => k => k(pred)(n)
 
+//hard coded church numbers
 const N0 = f => a => a
 const N1 = f => a => f(a)
 const N2 = f => a => f(f(a))
