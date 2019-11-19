@@ -29,6 +29,7 @@ N2 = lambda f: lambda a: f(f(a))
 N3 = lambda f: lambda a: f(f(f(a)))
 N4 = lambda f: lambda a: f(f(f(f(a))))
 N5 = lambda f: lambda a: f(f(f(f(f(a)))))
+churchToInt = lambda n: n(P1)(0)
 
 #lists and list operators
 pair = lambda a: lambda b: lambda f: f(a)(b)
@@ -50,3 +51,10 @@ sub = lambda n: lambda k: k(pred)(n)
 isZero = lambda n: n(K(F))(T)
 LeQ = lambda n: lambda k: isZero(sub(n)(k))
 eQ = lambda n: lambda k: And(LeQ(n)(k))(LeQ(n)(k))
+
+#lists
+nil = pair(T)(T)
+const = lambda h: lambda t: pair(F)(pair(h)(t))
+head = lambda z: first(second(z)) 
+tail = lambda z: second(second(z))
+

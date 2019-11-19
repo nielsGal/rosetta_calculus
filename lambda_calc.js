@@ -47,3 +47,9 @@ const N3 = f => a => f(f(f(a)))
 const N4 = f => a => f(f(f(f(a))))
 const N5 = f => a => f(f(f(f(f(a)))))
 
+//lists
+const nil = pair(T)(T)
+const isNil = p => p(K)
+const cons = h => t => pair(F)(pair(h)(t))
+const head = z => first(second(z))
+const tail = z => second(second(z))
