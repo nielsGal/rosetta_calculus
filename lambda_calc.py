@@ -58,3 +58,8 @@ const = lambda h: lambda t: pair(F)(pair(h)(t))
 head = lambda z: first(second(z)) 
 tail = lambda z: second(second(z))
 
+#binary trees
+Empty = lambda e: lambda b: e
+Branch = lambda x: lambda l: lambda r: lambda e: lambda b: b(x)(l(e)(b))(r(e)(b))
+Treesum = lambda t: t(0)(lambda x:lambda l:lambda r: x+l+r)
+#todo DFS BFS

@@ -53,3 +53,8 @@ const isNil = p => p(K)
 const cons = h => t => pair(F)(pair(h)(t))
 const head = z => first(second(z))
 const tail = z => second(second(z))
+
+//trees
+const Empty = e => b => e
+const Branch = x => l => r => e => b => b(x)(l(e)(b))(r(e)(b))
+const Treesum = t => t(0)(x => r => l => x+l+r)
