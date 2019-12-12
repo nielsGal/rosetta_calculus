@@ -38,6 +38,15 @@ const add = n => k => f => B(n(f))(k(f))
 const exp = n => k => k(n)
 const pred = n => first(n(phi)(pair(N0)(N0)))
 const sub = n => k => k(pred)(n)
+const mult = n => k => f => n(k(f))
+
+//church to bool operators
+const isZero = n => n(K(F))(T);
+const LeQ =  n => k => isZero(sub(n)(k));
+const eQ = n => k => And(LeQ(n)(k))(LeQ(k)(n))
+
+//rec functions
+const facti = f =>  n  => (isZero(n))(N1)(mult(n)(f (pred(n))))
 
 //hard coded church numbers
 const N0 = f => a => a
